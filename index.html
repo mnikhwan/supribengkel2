@@ -1,0 +1,398 @@
+
+<html lang="en">
+  <head>
+      <!-- Header settings -->
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Supri Bengkel Otomotif</title>
+      <!-- END Header settings -->
+  
+      <!-- CDN Framework daisyUi and tailwindcss-->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+      <script src="https://cdn.tailwindcss.com"></script>
+      <!-- END CDN Framework daisyUi -->
+   
+  
+      <!-- Custom css -->
+      <link rel="stylesheet" href="./src/css/custom.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+      <script>
+        // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+  
+      <!-- END Custom css -->
+  </head>
+  <body>
+      
+
+
+    <nav class="bg-white/90 backdrop-blur-lg fixed w-full z-20 top-0 start-0 border-b border-gray-200 order-1">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <a href="" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <img src="./src/img/logo.png" class="md:w-40 w-32" >
+      </a>
+      <div class="flex md:order-6 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          <button onclick="" type="button" class="flex flex-row items-center text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-light md:font-medium rounded-full font-medium px-4 text-center text-xs md:text-base">
+            <!-- <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900"> -->
+              Service Now
+              <svg class="w-2.5 h-2.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+              </svg>
+          
+          </button>
+          <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-full md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 " aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+            </svg>
+        </button>
+      </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-5 " id="navbar-sticky">
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent ">
+          <li>
+            <a href="#" class="block py-2 px-3 text-white bg-blue-600 rounded-full md:bg-transparent md:text-blue-700 md:p-0 " aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ">About</a>
+          </li>
+          <li>
+            <a href="services.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ">Services</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ">Media</a>
+          </li>
+          <li>
+            <a href="#" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ">Contact</a>
+          </li>
+        </ul>
+        <button id="theme-toggle" type="button" class="mt-4 md:mt-0 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 md:mx-4">
+          <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+          <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+      </button>
+      </div>
+      </div>
+    </nav>
+    
+
+    <!-- Main Jumbotron -->
+
+    <section class="pt-[4rem] bg-white dark:bg-gray-900 bg-[url('./src/img/herobg.png')] bg-center bg-cover dark:bg-[url('./src/img/herobg.png')]">
+      
+
+
+      <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 z-10 relative">
+          <a href="#" class="inline-flex justify-between items-center py-1 px-1 pe-4 mb-7 text-sm text-blue-700 bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300 hover:bg-blue-200 dark:hover:bg-blue-800">
+              <span class="text-xs bg-blue-600 rounded-full text-white px-4 py-1.5 me-3">New</span> <span class="text-sm font-medium">TikTok Videos was uploaded! See what's new</span> 
+              <svg class="w-2.5 h-2.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+              </svg>
+          </a>
+          <h3 class="mb-5 text-2xl tracking-widest text-zinc-50">OTOMOTIF SOLUTION</h3>
+          <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Supri Bengkel Mobil</h1>
+          
+          <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-200">
+            Dimulai dari sebuah bengkel sederhana di tahun 2002, Supri Bengkel Mobil telah menempuh perjalanan panjang dan berdedikasi untuk memberikan layanan terbaik di bidang perawatan dan perbaikan kendaraan roda empat.</p>
+            <!-- Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth.</p> -->
+          <div class="flex flex-col space-y-2 sm:flex-row sm:space-y-0 w-full max-w-md mx-auto">
+            <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                Service Now
+                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </a>
+            <a href="#" class="py-3 px-5 sm:ms-4 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
+                Learn more about us
+            </a>  
+        </div>
+      </div>
+      <div class="bg-gradient-to-b from-blue-50 to-transparent dark:from-blue-900 w-full h-full absolute top-0 left-0 z-0"></div>
+  </section>
+
+    <!-- ENDING Main Jumbotron -->
+
+    <section class="py-12 bg-gray-100">
+      <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-8">Our Services</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                  <div class="flex items-center justify-center mb-4">
+                      <img src="https://via.placeholder.com/100" alt="Service 1" class="w-16 h-16">
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2">Service One</h3>
+                  <p class="text-gray-600">Description of service one. This service offers amazing features and benefits.</p>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                  <div class="flex items-center justify-center mb-4">
+                      <img src="https://via.placeholder.com/100" alt="Service 2" class="w-16 h-16">
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2">Service Two</h3>
+                  <p class="text-gray-600">Description of service two. This service is designed to meet your needs.</p>
+              </div>
+              <div class="bg-white p-6 rounded-lg shadow-lg">
+                  <div class="flex items-center justify-center mb-4">
+                      <img src="https://via.placeholder.com/100" alt="Service 3" class="w-16 h-16">
+                  </div>
+                  <h3 class="text-xl font-semibold mb-2">Service Three</h3>
+                  <p class="text-gray-600">Description of service three. Experience the best with this service.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+    
+      <!-- Section OUR FEEDS -->
+      <section class="Main-Hero flex" id="MainHero">
+        <div class="hero min-h-screen bg-zinc-50">
+        <div class="hero-content text-center flex-col ">
+            <div class="">
+                <h3 class="mb-5 text-2xl tracking-wide text-gray-700">OUR FEEDS</h3>
+                <h1 class="mb-5 text-5xl font-bold text-blue-950">SUPRI BENGKEL</h1>
+            </div>
+
+
+
+            <div class="grid lg:grid-cols-4 lg:grid-rows-1  grid-cols-2 grid-rows-1 gap-4 p-4">
+
+                <div class="card bg-neutral-50  shadow-xl rounded-lg overflow-hidden ">
+                  <img src="./src/img/thumb1.png" alt="Image 1" class="w-full h-48 object-cover">
+                  <div class="card-body  p-4">
+                    <h2 class="text-blue-950 text-sm font-semibold">TikTok Video of Supri Bengkel</h2>
+                    <p class="text-gray-600 text-xs">Description of the first image.</p>
+                  </div>
+                </div>
+                <div class="card bg-neutral-50  shadow-xl rounded-lg overflow-hidden ">
+                  <img src="./src/img/thumb2.png" alt="Image 1" class="w-full h-48 object-cover">
+                  <div class="card-body  p-4">
+                    <h2 class="text-blue-950 text-sm font-semibold">TikTok Video of Supri Bengkel</h2>
+                    <p class="text-gray-600 text-xs">Description of the first image.</p>
+                  </div>
+                </div>
+                <div class="card bg-neutral-50  shadow-xl rounded-lg overflow-hidden ">
+                  <img src="./src/img/thumb1.png" alt="Image 1" class="w-full h-48 object-cover">
+                  <div class="card-body  p-4">
+                    <h2 class="text-blue-950 text-sm font-semibold">TikTok Video of Supri Bengkel</h2>
+                    <p class="text-gray-600 text-xs">Description of the first image.</p>
+                  </div>
+                </div>
+                <div class="card bg-neutral-50  shadow-xl rounded-lg overflow-hidden ">
+                  <img src="./src/img/thumb2.png" alt="Image 1" class="w-full h-48 object-cover">
+                  <div class="card-body  p-4">
+                    <h2 class="text-blue-950 text-sm font-semibold">TikTok Video of Supri Bengkel</h2>
+                    <p class="text-gray-600 text-xs">Description of the first image.</p>
+                  </div>
+                </div>
+              
+              
+              </div>
+              
+
+
+
+
+
+
+        </div>
+      </div>
+     </section>
+    <!-- END Section OUR FEEDS -->
+
+
+
+<!-- testi -->
+
+
+<section class="bg-white dark:bg-gray-900">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+      <div class="mx-auto max-w-screen-sm">
+          <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Testimonials</h2>
+          <p class="mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Explore the whole collection of open-source web components and elements built with the utility classes from Tailwind</p>
+      </div> 
+      <div class="grid mb-8 lg:mb-12 lg:grid-cols-2">
+          <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 lg:border-r dark:bg-gray-800 dark:border-gray-700">
+              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Speechless with how easy this was to integrate</h3>
+                  <p class="my-4">"I recently got my hands on Flowbite Pro, and holy crap, I'm speechless with how easy this was to integrate within my application. Most templates are a pain, code is scattered, and near impossible to theme.</p>
+                  <p class="my-4">Flowbite has code in one place and I'm not joking when I say it took me a matter of minutes to copy the code, customise it and integrate within a Laravel + Vue application.</p>
+                  <p class="my-4">If you care for your time, I hands down would go with this."</p>
+              </blockquote>
+              <figcaption class="flex justify-center items-center space-x-3">
+                  <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png" alt="profile picture">
+                  <div class="space-y-0.5 font-medium dark:text-white text-left">
+                      <div>Bonnie Green</div>
+                      <div class="text-sm font-light text-gray-500 dark:text-gray-400">Developer at Open AI</div>
+                  </div>
+              </figcaption>    
+          </figure>
+          <figure class="flex flex-col justify-center items-center p-8 text-center bg-gray-50 border-b border-gray-200 md:p-12 dark:bg-gray-800 dark:border-gray-700">
+              <blockquote class="mx-auto mb-8 max-w-2xl text-gray-500 dark:text-gray-400">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Solid foundation for any project</h3>
+                  <p class="my-4">"FlowBite provides a robust set of design tokens and components based on the popular Tailwind CSS framework. From the most used UI components like forms and navigation bars to the whole app screens designed both for desktop and mobile, this UI kit provides a solid foundation for any project.</p>
+                  <p class="my-4">Designing with Figma components that can be easily translated to the utility classes of Tailwind CSS is a huge timesaver!"</p>
+              </blockquote>
+              <figcaption class="flex justify-center items-center space-x-3">
+                  <img class="w-9 h-9 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png" alt="profile picture">
+                  <div class="space-y-0.5 font-medium dark:text-white text-left">
+                      <div>Roberta Casas</div>
+                      <div class="text-sm font-light text-gray-500 dark:text-gray-400">Lead designer at Dropbox</div>
+                  </div>
+              </figcaption>    
+          </figure>
+        
+          
+      </div>
+      <div class="text-center">
+          <a href="#" class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Show more...</a> 
+      </div>
+</section>
+
+
+<!-- testi enddd -->
+
+
+    
+<!-- Section hero SPONSOR -->
+<section class="Main-Hero flex" >
+  <div  class="hero min-h-screen bg-zinc-50">
+  <div class="hero-content text-center flex-col ">
+      <div class="">
+          <h3 class="mb-5 text-2xl tracking-wide text-gray-700">OUR SPONSOR</h3>
+          <h1 class="mb-5 text-5xl font-bold text-blue-950">SUPRI BENGKEL</h1>
+      </div>
+
+
+      <div class="container mx-auto p-6">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-4 justify-items-center items-center">
+            <img src="./src/img/sponsor/1.png" alt="Sponsor 1" class="w-64 h-32 object-contain transition-transform transform grayscale hover:grayscale-0 hover:scale-110 hover:rotate-3">
+            <img src="./src/img/sponsor/2.png" alt="Sponsor 2" class="w-64 h-32 object-contain transition-transform transform grayscale hover:grayscale-0 hover:scale-110 hover:rotate-3">
+            <img src="./src/img/sponsor/3.png" alt="Sponsor 3" class="w-64 h-32 object-contain transition-transform transform grayscale hover:grayscale-0 hover:scale-110 hover:rotate-3">
+            <img src="./src/img/sponsor/4.png" alt="Sponsor 4" class="w-64 h-32 object-contain transition-transform transform grayscale hover:grayscale-0 hover:scale-110 hover:rotate-3">
+            <img src="./src/img/sponsor/5.png" alt="Sponsor 5" class="w-64 h-32 object-contain transition-transform transform grayscale hover:grayscale-0 hover:scale-110 hover:rotate-3">
+            <img src="./src/img/sponsor/6.png" alt="Sponsor 6" class="w-64 h-32 object-contain transition-transform transform grayscale hover:grayscale-0 hover:scale-110 hover:rotate-3">
+            <img src="./src/img/sponsor/7.png" alt="Sponsor 7" class="w-64 h-32 object-contain transition-transform transform grayscale hover:grayscale-0 hover:scale-110 hover:rotate-3">
+            <img src="./src/img/sponsor/8.png" alt="Sponsor 8" class="w-64 h-32 object-contain transition-transform transform grayscale hover:grayscale-0 hover:scale-110 hover:rotate-3">
+            <img src="./src/img/sponsor/9.png" alt="Sponsor 9" class="w-64 h-32 object-contain transition-transform transform grayscale hover:grayscale-0 hover:scale-110 hover:rotate-3">
+        </div>
+    </div>
+      
+  
+  </div>
+</div>
+</section>
+<!-- END Section Sponsor ges -->
+
+
+<!-- footer cik -->
+
+  
+
+<footer class="bg-white">
+  <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0">
+            <a href="" class="flex items-center">
+                <img src="./src/img/logo.png" class="h-10 md:h-24 me-3" alt="FlowBite Logo" />
+                
+            </a>
+        </div>
+        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+            <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">Resources</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+                <li class="mb-4">
+                    <a href="https://flowbite.com/" class="hover:underline">Flowbite</a>
+                </li>
+                <li>
+                    <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                </li>
+            </ul>
+            </div>
+            
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">Follow us</h2>
+                <ul class="text-gray-500  font-medium">
+                    <li class="mb-4">
+                        <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                    </li>
+                    <li>
+                        <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">Legal</h2>
+                <ul class="text-gray-500  font-medium">
+                    <li class="mb-4">
+                        <a href="#" class="hover:underline">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                    </li>
+                </ul>
+            </div>
+
+          </div>
+        </div>
+        <div class="mt-8 md:mt-2">
+            <h2 class="mb-4 text-sm font-semibold text-gray-900 uppercase ">Location</h2>
+            <iframe class="rounded-lg  w-68 md:w-68" style="border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=supri+bengkel+Jl.+Karangtalun,+RT.01/RW.03,+Wonoboyo,+Kec.+Wonogiri,+Kabupaten+Wonogiri,+Jawa+Tengah+57615&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+            <p class="text-gray-600 text-xs pt-2 w-64">JL. KARANGTALUN, RT.01/RW.03, WONOBOYO, KEC. WONOGIRI, KABUPATEN WONOGIRI, JAWA TENGAH 57615G</p>
+        </div>
+    <hr class="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
+    <div class="sm:flex sm:items-center sm:justify-between">
+        <span class="text-sm text-gray-500 sm:text-center ">© 2025 <a href="https://flowbite.com/" class="hover:underline">Supri Bengkel Mobil</a>. All Rights Reserved.
+        </span>
+        <div class="flex mt-4 sm:justify-center sm:mt-0">
+            <a href="#" class="text-gray-500 hover:text-gray-900 ">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 8 19">
+                      <path fill-rule="evenodd" d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z" clip-rule="evenodd"/>
+                  </svg>
+                <span class="sr-only">Facebook page</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-900  ms-5">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 21 16">
+                      <path d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"/>
+                  </svg>
+                <span class="sr-only">Discord community</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-900  ms-5">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 17">
+                  <path fill-rule="evenodd" d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z" clip-rule="evenodd"/>
+              </svg>
+                <span class="sr-only">Twitter page</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-900  ms-5">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z" clip-rule="evenodd"/>
+                </svg>
+                <span class="sr-only">GitHub account</span>
+            </a>
+            <a href="#" class="text-gray-500 hover:text-gray-900  ms-5">
+                <svg class="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z" clip-rule="evenodd"/>
+              </svg>
+                <span class="sr-only">Dribbble account</span>
+            </a>
+        </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- footer cik ending -->
+
+<!-- 
+<h1 class="mt-[100rem]">a</h1> -->
+
+  <script src="./src/js/flowbite.min.js"></script>
+  <script src="./src/js/script.js">
+var a = 726;
+</script>
+  </body>
+  </html>
