@@ -8,4 +8,4 @@
 
 🔗```https://mnikhwan.github.io/supribengkel2/```
 
-🆕[Supri Bengkel - _🛠v.2.1.0 (update major to version 2)_](https://mnikhwan.github.io/supribengkel2/)
+🆕[Supri Bengkel - _🛠v.2.4.8 (update major to version 2)_](https://mnikhwan.github.io/supribengkel2/)
