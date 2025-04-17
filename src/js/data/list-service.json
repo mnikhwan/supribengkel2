@@ -1,0 +1,279 @@
+{
+  "kategori": [
+    {
+      "nama": "Kategori - Overhol power stir",
+      "items": [
+        {
+          "id": "Item-A1",
+          "nama": "Cek Oli bocor + klem (Overhol power stir)",
+          "value": "*Cek Oli bocor + klem (Overhol power stir)*"
+        },
+        {
+          "id": "Item-A2",
+          "nama": "Cek Baut-baut total (Overhol power stir)",
+          "value": "*Cek Baut-baut total (Overhol power stir)*"
+        },
+        {
+          "id": "Item-A3",
+          "nama": "Cek Tali boot stir (Overhol power stir)",
+          "value": "*Cek Tali boot stir (Overhol power stir)*"
+        },
+        {
+          "id": "Item-A4",
+          "nama": "Cek Kerapian posisi selang power (Overhol power stir)",
+          "value": "*Cek Kerapian posisi selang power (Overhol power stir)*"
+        },
+        {
+          "id": "Item-A5",
+          "nama": "Cek Kapasitas oli (Overhol power stir)",
+          "value": "*Cek Kapasitas oli (Overhol power stir)*"
+        },
+        {
+          "id": "Item-A6",
+          "nama": "Cek kunci keri (Overhol power stir)",
+          "value": "*Cek kunci keri (Overhol power stir)*"
+        }
+      ]
+    },
+    {
+      "nama": "Kategori - Roda",
+      "items": [
+        {
+          "id": "Item-B1",
+          "nama": "Cek Kancingan kampas (Roda)",
+          "value": "*Cek Kancingan kampas (Roda)*"
+        },
+        {
+          "id": "Item-B2",
+          "nama": "Cek per kampas (Roda)",
+          "value": "*Cek per kampas (Roda)*"
+        },
+        {
+          "id": "Item-B3",
+          "nama": "Cek Oli rem bocor (Roda)",
+          "value": "*Cek Oli rem bocor (Roda)*"
+        },
+        {
+          "id": "Item-B4",
+          "nama": "Cek Roda Seret (Roda)",
+          "value": "*Cek Roda Seret (Roda)*"
+        },
+        {
+          "id": "Item-B5",
+          "nama": "Cek Baut kaliper (Roda)",
+          "value": "*Cek Baut kaliper (Roda)*"
+        },
+        {
+          "id": "Item-B6",
+          "nama": "Cek Baut dudukan kaliper (Roda)",
+          "value": "*Cek Baut dudukan kaliper (Roda)*"
+        },
+        {
+          "id": "Item-B7",
+          "nama": "Cek Baut roda (Roda)",
+          "value": "*Cek Baut roda (Roda)*"
+        },
+        {
+          "id": "Item-B8",
+          "nama": "Cek Oli rem (Roda)",
+          "value": "*Cek Oli rem (Roda)*"
+        },
+        {
+          "id": "Item-B9",
+          "nama": "Cek Baut / Kunci keri (Roda)",
+          "value": "*Cek Baut / Kunci keri (Roda)*"
+        }
+      ]
+    },
+    {
+      "nama": "Kategori - Overhol Silindercop",
+      "items": [
+        {
+          "id": "Item-C1",
+          "nama": "Cek Baut-baut silinder cop (Overhol Silindercop)",
+          "value": "*Cek Baut-baut silinder cop (Overhol Silindercop)*"
+        },
+        {
+          "id": "Item-C2",
+          "nama": "Cek Stelan klep (Overhol Silindercop)",
+          "value": "*Cek Stelan klep (Overhol Silindercop)*"
+        },
+        {
+          "id": "Item-C3",
+          "nama": "Cek Baut-baut rantai / temeng bel (Overhol Silindercop)",
+          "value": "*Cek Baut-baut rantai / temeng bel (Overhol Silindercop)*"
+        },
+        {
+          "id": "Item-C4",
+          "nama": "Cek Baut-baut manipol / knalpot (Overhol Silindercop)",
+          "value": "*Cek Baut-baut manipol / knalpot (Overhol Silindercop)*"
+        },
+        {
+          "id": "Item-C5",
+          "nama": "Cek Soket-soket rapi / baut coil / basi (Overhol Silindercop)",
+          "value": "*Cek Soket-soket rapi / baut coil / basi (Overhol Silindercop)*"
+        },
+        {
+          "id": "Item-C6",
+          "nama": "Cek Fanbel kendor (Overhol Silindercop)",
+          "value": "*Cek Fanbel kendor (Overhol Silindercop)*"
+        },
+        {
+          "id": "Item-C7",
+          "nama": "Cek Air radiator / cek air bocor (Overhol Silindercop)",
+          "value": "*Cek Air radiator / cek air bocor (Overhol Silindercop)*"
+        }
+      ]
+    },
+    {
+      "nama": "Kategori - Overhol Mesin",
+      "items": [
+        {
+          "id": "Item-D1",
+          "nama": "Cek Metal posisi nok (Overhol Mesin)",
+          "value": "*Cek Metal posisi nok (Overhol Mesin)*"
+        },
+        {
+          "id": "Item-D2",
+          "nama": "Cek Reng piston gap (Overhol Mesin)",
+          "value": "*Cek Reng piston gap (Overhol Mesin)*"
+        },
+        {
+          "id": "Item-D3",
+          "nama": "Cek Baut-baut total (Overhol Mesin)",
+          "value": "*Cek Baut-baut total (Overhol Mesin)*"
+        },
+        {
+          "id": "Item-D4",
+          "nama": "Cek Pemasangan sil-sil (Overhol Mesin)",
+          "value": "*Cek Pemasangan sil-sil (Overhol Mesin)*"
+        },
+        {
+          "id": "Item-D5",
+          "nama": "Cek Soket-soket + kabel + kerapian (Overhol Mesin)",
+          "value": "*Cek Soket-soket + kabel + kerapian (Overhol Mesin)*"
+        },
+        {
+          "id": "Item-D6",
+          "nama": "Cek Kunci keri (Overhol Mesin)",
+          "value": "*Cek Kunci keri (Overhol Mesin)*"
+        }
+      ]
+    },
+    {
+      "nama": "Kategori - Overhol / Tranmisi",
+      "items": [
+        {
+          "id": "Item-E1",
+          "nama": "Cek Baut kopling dan roda gila (Overhol / Tranmisi)",
+          "value": "*Cek Baut kopling dan roda gila (Overhol / Tranmisi)*"
+        },
+        {
+          "id": "Item-E2",
+          "nama": "Cek Baut kopel + gantungan kopel (Overhol / Tranmisi)",
+          "value": "*Cek Baut kopel + gantungan kopel (Overhol / Tranmisi)*"
+        },
+        {
+          "id": "Item-E3",
+          "nama": "Cek Baut tap oli (Overhol / Tranmisi)",
+          "value": "*Cek Baut tap oli (Overhol / Tranmisi)*"
+        },
+        {
+          "id": "Item-E4",
+          "nama": "Cek Oli Tranmisi (Overhol / Tranmisi)",
+          "value": "*Cek Oli Tranmisi (Overhol / Tranmisi)*"
+        },
+        {
+          "id": "Item-E5",
+          "nama": "Cek kunci keri (Overhol / Tranmisi)",
+          "value": "*Cek kunci keri (Overhol / Tranmisi)*"
+        },
+        {
+          "id": "Item-E6",
+          "nama": "Cek Kunci total (Overhol / Tranmisi)",
+          "value": "*Cek Kunci total (Overhol / Tranmisi)*"
+        }
+      ]
+    },
+    {
+      "nama": "Kategori - Tune UP + Ganti Oli",
+      "items": [
+        {
+          "id": "Item-F1",
+          "nama": "Cek Baut tap oli (Tune UP + Ganti Oli)",
+          "value": "*Cek Baut tap oli (Tune UP + Ganti Oli)*"
+        },
+        {
+          "id": "Item-F2",
+          "nama": "Cek Kapasitas oli (Tune UP + Ganti Oli)",
+          "value": "*Cek Kapasitas oli (Tune UP + Ganti Oli)*"
+        },
+        {
+          "id": "Item-F3",
+          "nama": "Cek Kekencangan busi + baut foil (Tune UP + Ganti Oli)",
+          "value": "*Cek Kekencangan busi + baut foil (Tune UP + Ganti Oli)*"
+        },
+        {
+          "id": "Item-F4",
+          "nama": "Cek Baut-baut filter + cek filter oli (Tune UP + Ganti Oli)",
+          "value": "*Cek Baut-baut filter + cek filter oli (Tune UP + Ganti Oli)*"
+        },
+        {
+          "id": "Item-F5",
+          "nama": "Cek Oli bocor + filter bocor (Tune UP + Ganti Oli)",
+          "value": "*Cek Oli bocor + filter bocor (Tune UP + Ganti Oli)*"
+        },
+        {
+          "id": "Item-F6",
+          "nama": "Cek Kabel + soket (Tune UP + Ganti Oli)",
+          "value": "*Cek Kabel + soket (Tune UP + Ganti Oli)*"
+        },
+        {
+          "id": "Item-F7",
+          "nama": "Cek kunci keri (Tune UP + Ganti Oli)",
+          "value": "*Cek kunci keri (Tune UP + Ganti Oli)*"
+        },
+        {
+          "id": "Item-F8",
+          "nama": "Cek fanbelt (Tune UP + Ganti Oli)",
+          "value": "*Cek fanbelt (Tune UP + Ganti Oli)*"
+        }
+      ]
+    },
+    {
+      "nama": "Kategori - Kaki",
+      "items": [
+        {
+          "id": "Item-G1",
+          "nama": "Cek Baut terod / boljoin (Kaki)",
+          "value": "*Cek Baut terod / boljoin (Kaki)*"
+        },
+        {
+          "id": "Item-G2",
+          "nama": "Cek Rek en kocak (Kaki)",
+          "value": "*Cek Rek en kocak (Kaki)*"
+        },
+        {
+          "id": "Item-G3",
+          "nama": "Cek Boot kokel / boot stir sobek (Kaki)",
+          "value": "*Cek Boot kokel / boot stir sobek (Kaki)*"
+        },
+        {
+          "id": "Item-G4",
+          "nama": "Cek Baut-baut sayap (Kaki)",
+          "value": "*Cek Baut-baut sayap (Kaki)*"
+        },
+        {
+          "id": "Item-G5",
+          "nama": "Cek Baut kaki-kaki (Kaki)",
+          "value": "*Cek Baut kaki-kaki (Kaki)*"
+        },
+        {
+          "id": "Item-G6",
+          "nama": "Cek kunci keri (Kaki)",
+          "value": "*Cek kunci keri (Kaki)*"
+        }
+      ]
+    }
+  ]
+}
