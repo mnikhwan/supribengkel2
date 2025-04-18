@@ -15,7 +15,7 @@
     
         <!-- Custom css -->
         <link rel="stylesheet" href="./src/css/custom.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
         <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
         <script>
           // On page load or when changing themes, best to add inline in `head` to avoid FOUC
@@ -70,10 +70,7 @@
                   <a href="contact.html" class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 ">Contact</a>
                 </li>
               </ul>
-              <button id="theme-toggle" type="button" class="mt-4 md:mt-0 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 md:mx-4">
-                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-            </button>
+              
             </div>
             </div>
           </nav>
@@ -95,7 +92,68 @@
     
 
 
+    
+  <div class="max-w-6xl mx-auto px-4 py-8">
+    <div class="flex justify-between items-center mb-6">
+      <!-- Social Media Buttons -->
+<div class="flex flex-wrap gap-4 mb-6 justify-items-center">
+  <a href="https://www.instagram.com/" target="_blank" class="flex items-center gap-2 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 transition">
+    <i class="fab fa-instagram"></i> Instagram
+  </a>
+  <a href="https://www.tiktok.com/" target="_blank" class="flex items-center gap-2 bg-black text-white px-4 py-2 rounded hover:bg-gray-800 transition">
+    <i class="fab fa-tiktok"></i> TikTok
+  </a>
+  <a href="https://www.youtube.com/" target="_blank" class="flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">
+    <i class="fab fa-youtube"></i> YouTube
+  </a>
+  <a href="https://www.facebook.com/" target="_blank" class="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+    <i class="fab fa-facebook-f"></i> Facebook
+  </a>
+</div>
+    </div>
 
+    <!-- Filter Controls -->
+    <div class="flex flex-wrap gap-4 mb-6">
+      <button data-filter="all" class="filter-btn px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 transition">Semua</button>
+      <button data-filter="tiktok" class="filter-btn px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 transition">TikTok</button>
+      <button data-filter="instagram" class="filter-btn px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 transition">Instagram</button>
+      <button data-filter="youtube" class="filter-btn px-4 py-2 bg-gray-200 rounded hover:bg-gray-300 transition">YouTube</button>
+    </div>
+
+    <!-- Media Container -->
+    <div id="mediaContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 transition-all">
+      <!-- TikTok -->
+      <div class="media-item tiktok bg-white rounded-lg p-4 shadow hover:shadow-lg transition cursor-pointer" onclick="openModal(`tiktok`, `https://www.tiktok.com/@unisri.official/video/7391365027611086086`)">
+        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@unisri.official/video/7391365027611086086" data-video-id="7391365027611086086" style="max-width: 100%;">
+          <section>Loading TikTok...</section>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+      </div>
+
+      <!-- Instagram -->
+      <div class="media-item instagram bg-white rounded-lg p-4 shadow hover:shadow-lg transition cursor-pointer" onclick="openModal(`instagram`, `https://www.instagram.com/p/C4zE651R3QW/`)">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/C4zE651R3QW/" data-instgrm-version="14" style="max-width: 100%; ">
+          <p>Loading Instagram...</p>
+        </blockquote>
+        <script async src="https://www.instagram.com/embed.js"></script>
+      </div>
+
+      <!-- YouTube -->
+      <div class="media-item youtube bg-white rounded-lg p-4 shadow hover:shadow-lg transition cursor-pointer" onclick="openModal(`youtube`, `https://www.youtube.com/watch?v=Xh9jwAx-VqQ`)">
+        <iframe class="w-full aspect-video rounded" src="https://www.youtube.com/embed/Xh9jwAx-VqQ" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Preview -->
+  <div id="modalPreview" onclick="closeModal()" class="fixed  inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center">
+    <div class="bg-white w-[90%] mt-28 mx-auto md:w-[70%] max-h-[90vh] overflow-auto p-6 rounded-lg shadow-lg transform transition-all scale-95 opacity-0" id="modalContent">
+      <div class="flex justify-end">
+        <button onclick="closeModal()" class="text-red-600 font-semibold">Tutup ✕</button>
+      </div>
+      <div id="modalEmbed" class="w-full mt-4"></div>
+    </div>
+  </div>
   
 
 

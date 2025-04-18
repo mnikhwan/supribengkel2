@@ -142,3 +142,134 @@ let allItems = [];
     countSpan.textContent = count;
   }
 // //////////////////////////////// LIST DATAAAAAAAAA////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+// MEDIAAAAAAAAAAAAAAAAAAAAAAAAAAA //////////////
+
+
+
+
+    
+    // Filter
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const mediaItems = document.querySelectorAll('.media-item');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const filter = button.getAttribute('data-filter');
+        mediaItems.forEach(item => {
+          item.style.display = (filter === 'all' || item.classList.contains(filter)) ? 'block' : 'none';
+        });
+      });
+    });
+
+    // Modal
+    const modal = document.getElementById('modalPreview');
+    const modalEmbed = document.getElementById('modalEmbed');
+    const modalContent = document.getElementById('modalContent');
+
+    function openModal(type, url) {
+      modal.classList.remove('hidden');
+      setTimeout(() => {
+        modalContent.classList.add('scale-100', 'opacity-100');
+        modalContent.classList.remove('scale-95', 'opacity-0');
+      }, 10);
+
+      if (type === 'tiktok') {
+        modalEmbed.innerHTML = `
+          <blockquote class="tiktok-embed" cite="${url}" data-video-id="${getTiktokId(url)}" style="max-width: 100%;">
+            <section>Loading TikTok...</section>
+          </blockquote>
+        `;
+        const script = document.createElement('script');
+        script.src = "https://www.tiktok.com/embed.js";
+        script.async = true;
+        document.body.appendChild(script);
+      } else if (type === 'instagram') {
+        modalEmbed.innerHTML = `
+          <blockquote class="instagram-media" data-instgrm-permalink="${url}" data-instgrm-version="14" style="max-width: 100%; width: 100%;">
+            <p>Loading Instagram...</p>
+          </blockquote>
+        `;
+        const script = document.createElement('script');
+        script.src = "https://www.instagram.com/embed.js";
+        script.async = true;
+        document.body.appendChild(script);
+      } else if (type === 'youtube') {
+        const youtubeId = getYoutubeId(url);
+        modalEmbed.innerHTML = `
+          <div class="aspect-video w-full">
+            <iframe class="w-full h-full rounded" src="https://www.youtube.com/embed/${youtubeId}" frameborder="0" allowfullscreen></iframe>
+          </div>
+        `;
+      }
+    }
+
+    function closeModal() {
+      modalContent.classList.remove('scale-100', 'opacity-100');
+      modalContent.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modalEmbed.innerHTML = '';
+      }, 300);
+    }
+
+    function getTiktokId(url) {
+      const parts = url.split('/video/');
+      return parts.length > 1 ? parts[1] : '';
+    }
+
+    function getYoutubeId(url) {
+      const regExp = /(?:\?v=|\/embed\/|\.be\/)([a-zA-Z0-9_-]{11})/;
+      const match = url.match(regExp);
+      return match ? match[1] : '';
+    }
+
+    window.addEventListener('load', () => {
+      if (window.instgrm) window.instgrm.Embeds.process();
+    });
+
+
+
+// MEDIAAAAAAAAAAAAAAAAAAAAAAAAAAA //////////////
+
+
+
+// ///////////////////////CONTACT /////////////////////LADPLAPDLADPLAPDLAPDL
+
+
+function openWhatsApp() {
+  window.open('https://wa.me/62821-3784-3802', '_blank');
+}
+
+function sendEmail() {
+  window.location.href = 'mailto:supribengkel@gmail.com';
+}
+
+function openMaps() {
+  window.open('https://maps.app.goo.gl/oLbFRWGcpTDVrSPs8', '_blank');
+}
+
+// Reveal animation
+document.addEventListener('DOMContentLoaded', () => {
+  const items = document.querySelectorAll('.contact-item');
+  items.forEach((item, i) => {
+    setTimeout(() => {
+      item.classList.add('opacity-100', 'translate-y-0');
+    }, i * 150);
+    item.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-500');
+  });
+});
+
+
+
+
+// ///////////////////////CONTACT /////////////////////LADPLAPDLADPLAPDLAPDL

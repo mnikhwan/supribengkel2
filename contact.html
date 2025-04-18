@@ -70,10 +70,7 @@
                   <a href="contact.html" class="block py-2 px-3 text-white bg-blue-600 rounded-full md:bg-transparent md:text-blue-700 md:p-0  ">Contact</a>
                 </li>
               </ul>
-              <button id="theme-toggle" type="button" class="mt-4 md:mt-0 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 md:mx-4">
-                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
-                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-            </button>
+              
             </div>
             </div>
           </nav>
@@ -93,7 +90,49 @@
     <h3 class="mb-5 text-2xl tracking-wide text-gray-700">CONTACT US</h3>
     <h1 class="mb-5 text-4xl font-bold text-blue-950">SUPRI BENGKEL</h1>
     
+        
+  <div class="max-w-4xl mx-auto p-6">
 
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- WhatsApp -->
+      <div class="contact-item p-5 bg-white rounded-xl shadow hover:shadow-md transition transform hover:scale-105 cursor-pointer" onclick="openWhatsApp()">
+        <h2 class="text-xl font-semibold mb-2">WhatsApp</h2>
+        <p class="text-green-600">+62 821-3784-3802</p>
+      </div>
+
+      <!-- Email -->
+      <div class="contact-item p-5 bg-white rounded-xl shadow hover:shadow-md transition transform hover:scale-105 cursor-pointer" onclick="sendEmail()">
+        <h2 class="text-xl font-semibold mb-2">Email</h2>
+        <p class="text-blue-600">supribengkel@gmail.com</p>
+      </div>
+
+      <!-- Alamat -->
+      <div class="contact-item p-5 bg-white rounded-xl shadow hover:shadow-md transition transform hover:scale-105 cursor-pointer" onclick="openMaps()">
+        <h2 class="text-xl font-semibold mb-2">Alamat</h2>
+        <p>JL. KARANGTALUN, RT.01/RW.03, WONOBOYO, KEC. WONOGIRI, KABUPATEN WONOGIRI, JAWA TENGAH 57615G</p>
+      </div>
+
+      <!-- Media Sosial -->
+      <div class="contact-item p-5 bg-white rounded-xl shadow hover:shadow-md transition transform hover:scale-105">
+        <h2 class="text-xl font-semibold mb-3">Media Sosial</h2>
+        <div class="space-y-2">
+          <a href="https://www.instagram.com/" target="_blank" class="flex items-center gap-2 text-pink-500 hover:underline">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 448 512"><path d="M224,202.7c-29.3,0-53.3,24-53.3,53.3s24,53.3,53.3,53.3s53.3-24,53.3-53.3S253.3,202.7,224,202.7z M398.8,80 C394.9,54.5,375.6,35,350.3,31.1C322.2,26,273.6,24,224,24S125.8,26,97.7,31.1C72.4,35,53.1,54.5,49.2,80C43.2,108.2,41,156.8,41,206.4 s2.2,98.2,7.1,126.3c3.9,25.5,23.2,45.1,48.5,48.9C124.8,387.3,173.4,389.3,224,389.3s99.2-2,127.3-7.1c25.3-3.8,44.6-23.3,48.5-48.9 c5.1-28.1,7.1-76.7,7.1-126.3S403.9,108.2,398.8,80z"/></svg>
+            Instagram
+          </a>
+          <a href="https://wa.me/62821-3784-3802" target="_blank" class="flex items-center gap-2 text-green-600 hover:underline">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 448 512"><path d="M380.9 97.1C339.3 55.5 283.6 32 224.2 32 103.5 32 8.8 126.7 8.8 247.5c0 43.7 11.5 86.4 33.3 124L0 480l113.5-42.2c35.6 19.6 75.6 29.9 116.9 29.9 120.7 0 215.5-94.7 215.5-215.5 0-59.4-23.5-115.1-65.1-157.1z"/></svg>
+            WhatsApp
+          </a>
+          <a href="https://facebook.com/" target="_blank" class="flex items-center gap-2 text-blue-700 hover:underline">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 320 512"><path d="M279.14 288l14.22-92.66h-88.91V127.37c0-25.35 12.42-50.06 52.24-50.06H293V6.26S259.43 0 225.36 0C141.09 0 89.09 54.42 89.09 153.26V195.3H0V288h89.09v224h107.8V288z"/></svg>
+            Facebook
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   
